@@ -1,0 +1,11 @@
+set xlabel "x location"
+set ylabel "y location"
+set xrange [0:200]
+set yrange [0:200]
+set view equal xyz
+set terminal windows
+plot "point_data.txt"  ps var pt 3  with points 
+pause -1
+set terminal png font arial 14 size 800,600
+set output 'output1.png'
+replot
